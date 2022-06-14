@@ -47,4 +47,4 @@ This work provides the first large-scale standardized benchmark on Dataset Conde
     }
 </style>
 
-<img src="/assets/ruochen.jpeg" class="profile" alt="" />
+![image](/assets/ruochen.jpeg){: class="profile"}
