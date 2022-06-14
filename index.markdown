@@ -29,3 +29,22 @@ This work provides the first large-scale standardized benchmark on Dataset Conde
 |![](/assets/random.png) | ![](/assets/synthetic.png)|
 |:--:|:--:|
 |*Real images* | *Synthetic images* |
+
+
+***
+<br>   
+
+
+![image](/assets/code.png)
+
+***
+<style>
+    .profile {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+</style>
+
+<img src="/assets/ruochen.jpeg" class="profile" alt="" />
