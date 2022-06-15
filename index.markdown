@@ -36,7 +36,8 @@ This work provides the first large-scale standardized benchmark on Dataset Conde
 
 |![](/assets/database.png) | ![](/assets/speed.png) | ![](/assets/search.png)|
 |:--:|:-------:|:--:|
-|**Comprehensive Datasets**<br>Different datasets are provide ranging from medium to large to better evaluate the condensation methods|**Automated Eval Library**<br>We provide a fully auotmated condensation methods performance evaluation library to set the standard benchmark and accelerate the research|**NAS**<br>We follow the standard Neural Architecture Search proceduare and provide the insights on using condensed dataset for model design|
+|<span style="color:rgb(0, 139, 139);">**Comprehensive Datasets**</span>|<span style="color:rgb(0, 139, 139);">**Automated Eval Library**</span>|<span style="color:rgb(0, 139, 139);">**NAS**</span>|
+Different datasets are provide ranging from medium to large to **better evaluate** the condensation methods| We provide a **fully auotmated** condensation methods performance evaluation library to set the standard benchmark and accelerate the research|We follow the **standard** Neural Architecture Search proceduare and provide the insights on using condensed dataset for model design|
 
 
 ![image](/assets/code.png)
