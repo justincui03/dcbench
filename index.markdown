@@ -3,13 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 Title: Home
-menus:
-  header:
-    title: Home
-    weight: 1
 ---
 
-![image](/assets/ucla_logo.jpeg){: style="float: left"}{: width="150" } 
+![image](/assets/campus-logo.png){: style="float: left"}{: width="260" }  
 # Dataset Condensation Benchmark
 ### Benchmark and library for accelerating DC research  
 
