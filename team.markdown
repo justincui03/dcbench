@@ -21,6 +21,6 @@ permalink: /team/
 <br>
 
 
-|![image](/assets/justin.jpeg){: class="profile" style="float: left"} <br>Justin Cui | ![image](/assets/ruochen.jpeg){: class="profile" style="float: left"} <br>Ruochen Wang|
+|![image](/assets/justin.jpeg){: class="profile" style="float: left"} <br>Justin Cui<br>University of California, Los Angeles| ![image](/assets/ruochen.jpeg){: class="profile" style="float: left"} <br>Ruochen Wang<br>University of California, Los Angeles|
 |||
-|![image](/assets/sisi.jpeg){: class="profile" style="float: left"} <br>Si Si|![image](/assets/cho.jpeg){: class="profile" style="float: left"} <br>Cho-Jui Hsieh |
+|![image](/assets/sisi.jpeg){: class="profile" style="float: left"} <br>Si Si<br>Google Research|![image](/assets/cho.jpeg){: class="profile" style="float: left"} <br>Cho-Jui Hsieh<br>University of California, Los Angeles |
