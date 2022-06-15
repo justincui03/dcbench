@@ -4,15 +4,21 @@ title: Networks
 permalink: /networks/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# **MLP**
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+The network includes 3 fully connected layers152
+and the width is set to 128. The number of trainable parameters is around 411K.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+# **ConvNet**
 
+This is the standard architecture used for both training and evaluating synthetic154
+dataset in previous condensation works. The default network contains three 3x3 convolution layers,155
+each followed by 2x2 average pooling and instance normalization. The hidden embedding size is set
+to 128. There are around 320K trainable parameters. For TinyImageNet, we increase the number of
+layers to 4 for improved performance, as suggested in previous work
 
-[jekyll-organization]: https://github.com/jekyll
+# **ResNet18, ResNet152**
+
+They are commonly used ResNet architecture with 4/50 residual blocks
+respectively. Each block contains 2 convolution layers followed by ReLU activation and instance
+normalization (IN) [41]. There are 11M/60M trainable parameters in ResNet18/ResNet152
