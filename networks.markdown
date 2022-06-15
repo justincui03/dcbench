@@ -22,3 +22,9 @@ layers to 4 for improved performance, as suggested in previous work
 They are commonly used ResNet architecture with 4/50 residual blocks
 respectively. Each block contains 2 convolution layers followed by ReLU activation and instance
 normalization (IN). There are 11M/60M trainable parameters in ResNet18/ResNet152
+
+<br>
+
+***
+<br>
+More networks are being added!
