@@ -2,6 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+Title: Home
+menus:
+  header:
+    title: Home
+    weight: 1
 ---
 
 ![image](/assets/ucla_logo.jpeg){: style="float: left"}{: width="150" } 
@@ -40,11 +45,17 @@ This work provides the first large-scale standardized benchmark on Dataset Conde
 ***
 <style>
     .profile {
-        width: 128px;
-        height: 128px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
         border-radius: 50%;
     }
+    td, th {
+   border: none!important;
+}
 </style>
 
-![image](/assets/ruochen.jpeg){: class="profile"}
+
+|![image](/assets/justin.jpeg){: class="profile" style="float: left"} <br>Justin Cui | ![image](/assets/ruochen.jpeg){: class="profile" style="float: left"} <br>Ruochen Wang|
+|||
+|![image](/assets/sisi.jpeg){: class="profile" style="float: left"} <br>Si Si|![image](/assets/cho.jpeg){: class="profile" style="float: left"} <br>Cho-Jui Hsieh |
