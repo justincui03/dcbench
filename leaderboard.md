@@ -54,15 +54,18 @@ permalink: /leaderboard/
 </section>
 
 <script>
-    $("#div_cifar10_ipc1").load("/tables/cifar10-ipc1.html");
-    $("#div_cifar10_ipc10").load("/tables/cifar10-ipc10.html");
-    $("#div_cifar10_ipc50").load("/tables/cifar10-ipc50.html");
+    $("#div_cifar10_ipc1").load("/tables/cifar10-ipc1.html", function() {
+      $('#cifar10-ipc1').DataTable();
+    });
+    $("#div_cifar10_ipc10").load("/tables/cifar10-ipc10.html", function() {
+      $('#cifar10-ipc10').DataTable();
+    });
+    $("#div_cifar10_ipc50").load("/tables/cifar10-ipc50.html", function() {
+      $('#cifar10-ipc50').DataTable();
+    });
 </script>
 <script>
     $(document).ready(function() {
-      $('#cifar10-ipc1').DataTable();
-      $('#cifar10-ipc10').DataTable();
-      $('#cifar10-ipc50').DataTable();
     });
 </script>
 
