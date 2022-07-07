@@ -20,11 +20,11 @@ permalink: /leaderboard/
   <a class="button" href="#div_cifar100_ipc10_heading">CIFAR-100 IPC10</a>
   <a class="button" href="#div_cifar100_ipc50_heading">CIFAR-100 IPC50</a>
 </div>
-<!-- <div id="leaderboard" class="container button-list">
-  <a class="button" href="#div_imagenet_Linf_heading">TinyImagenet IPC1</a>
-  <a class="button" href="#div_imagenet_Linf_heading">TinyImagenet IPC10</a>
-  <a class="button" href="#div_imagenet_Linf_heading">TinyImagenet IPC50</a>
-</div> -->
+<div id="leaderboard" class="container button-list">
+  <a class="button" href="#div_tinyimagenet_ipc1_heading">TinyImagenet IPC1</a>
+  <a class="button" href="#div_tinyimagenet_ipc10_heading">TinyImagenet IPC10</a>
+  <a class="button" href="#div_tinyimagenet_ipc50_heading">TinyImagenet IPC50</a>
+</div>
 
 <section class="container" id="div_cifar10_ipc1_heading">
   <div class="heading">
@@ -80,6 +80,33 @@ permalink: /leaderboard/
   <div id="div_cifar100_ipc50"></div>
 </section>
 
+<section class="container" id="div_tinyimagenet_ipc1_heading">
+  <div class="heading">
+    <p>
+    TinyImagenet IPC 1
+    </p>
+  </div>
+  <div id="div_tinyimagenet_ipc1"></div>
+</section>
+
+<section class="container" id="div_tinyimagenet_ipc10_heading">
+  <div class="heading">
+    <p>
+    TinyImagenet IPC 10
+    </p>
+  </div>
+  <div id="div_tinyimagenet_ipc10"></div>
+</section>
+
+<section class="container" id="div_tinyimagenet_ipc50_heading">
+  <div class="heading">
+    <p>
+    TinyImagenet IPC 50
+    </p>
+  </div>
+  <div id="div_tinyimagenet_ipc50"></div>
+</section>
+
 <script>
     $("#div_cifar10_ipc1").load("../tables/cifar10-ipc1.html", function() {
       $('#cifar10-ipc1').DataTable();
@@ -98,6 +125,15 @@ permalink: /leaderboard/
     });
     $("#div_cifar100_ipc50").load("../tables/cifar100-ipc50.html", function() {
       $('#cifar10-ipc50').DataTable();
+    });
+    $("#div_tinyimagenet_ipc1").load("../tables/tinyimagenet-ipc1.html", function() {
+      $('#tinyimagenet-ipc1').DataTable();
+    });
+    $("#div_tinyimagenet_ipc10").load("../tables/tinyimagenet-ipc10.html", function() {
+      $('#tinyimagenet-ipc10').DataTable();
+    });
+    $("#div_tinyimagenet_ipc50").load("../tables/tinyimagenet-ipc50.html", function() {
+      $('#tinyimagenet-ipc50').DataTable();
     });
 </script>
 <script>
