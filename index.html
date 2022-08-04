@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178132094-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-178132094-1");
+  </script>
+
+  <meta charset="UTF-8" />
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1" />-->
+  <meta name="viewport" content="width=1024" />
+  <title>DCBench: Dataset Condensation Benchmark</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" />
+  <script src="https://kit.fontawesome.com/b939870cfb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.foundation.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.foundation.min.js"></script>
+
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"
+          >DC-Bench</a>
+        <button
+          class="navbar-toggler navbar-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#main-navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#leaderboard">Leaderboards</a>
+            </li>
+            <li>
+              <a class="nav-link" href="https://arxiv.org/abs/2207.09639" target="_blank">Paper</a>
+            </li>
+            <li>
+              <a class="nav-link text-nowrap" href="https://github.com/justincui03/dc_benchmark"
+                target="_blank">Github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- <hr class="toprule" /> -->
+  <header>
+    <div class="header-block container">
+      <div class="logo"><img src="./images/logo.png" alt="logo" /></div>
+      <div class="title">DC-BENCH</div>
+      <div class="description">
+        A standardized benchmark for dataset condensation
+      </div>
+    </div>
+  </header>
+  <!-- <hr class="toprule" /> -->
+
+  <div class="container">
+    <section id="introduction">
+      <div class="overview">
+        <p class="doublealign">
+          <b>Dataset Condensation</b> is a newly emerging technique aiming at learning a tiny dataset that captures the rich information encoded in the original dataset. As the size of datasets contemporary machine learning models rely on becomes increasingly large, condensation methods become a prominent direction for accelerating network training and reducing data storage. Despite numerous methods have been proposed in this rapidly growing field, evaluating and comparing different condensation methods is non-trivial and still remains an open issue.<br><br>
+
+          This work provides the <b>first large-scale standardized benchmark</b> on Dataset Condensation. It consists of a suite of evaluations to comprehensively reflect the generability and effectiveness of condensation methods through the lens of their generated dataset. The benchmark library, including evaluators, baseline methods, and generated datasets, is open-sourced at DCBench github.
+        </p>
+        <div class="flexbox-container features">
+          <div class="element">
+            <div class="icon">
+              <img src="./images/database.png" />
+            </div>
+            <p>
+              Comprehensive Datasets
+            </p>
+            <div class="divider">
+              <hr />
+            </div>
+            <div class="description">
+            Different datasets are provide ranging from medium to large to better evaluate the condensation methods
+            </div>
+          </div>
+          <div class="element">
+            <div class="icon">
+              <img src="./images/speed.png" />
+            </div>
+            <p>
+              Automated Eval Library
+            </p>
+            <div class="divider">
+              <hr />
+            </div>
+            <div class="description">
+            We provide a fully auotmated condensation methods performance evaluation library
+            </div>
+          </div>
+          <div class="element">
+            <div class="icon">
+              <img src="./images/search.png" />
+            </div>
+            <p>
+              NAS
+            </p>
+            <div class="divider">
+              <hr />
+            </div>
+            <div class="description">
+            We follow the standard Neural Architecture Search proceduare by using condensed dataset for model design
+            </div>
+            <div class="vspace30"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div id="leaderboard" class="container button-list">
+      <div class="heading">
+        <u>
+          Available Leaderboards
+        </u>
+      </div>
+      <div id="leaderboard" class="container button-list">
+        <a class="btn btn-secondary" href="#div_cifar10_ipc1_heading">CIFAR-10 IPC1</a>
+        <a class="btn btn-secondary" href="#div_cifar10_ipc10_heading">CIFAR-10 IPC10</a>
+        <a class="btn btn-secondary" href="#div_cifar10_ipc50_heading">CIFAR-10 IPC50</a>
+      </div>
+      <div id="leaderboard" class="container button-list">
+        <a class="btn btn-secondary" href="#div_cifar100_ipc1_heading">CIFAR-100 IPC1</a>
+        <a class="btn btn-secondary" href="#div_cifar100_ipc10_heading">CIFAR-100 IPC10</a>
+        <a class="btn btn-secondary" href="#div_cifar100_ipc50_heading">CIFAR-100 IPC50</a>
+      </div>
+      <div id="leaderboard" class="container button-list">
+        <a class="btn btn-secondary" href="#div_tinyimagenet_ipc1_heading">TinyImagenet IPC1</a>
+        <a class="btn btn-secondary" href="#div_tinyimagenet_ipc10_heading">TinyImagenet IPC10</a>
+        <a class="btn btn-secondary" href="#div_tinyimagenet_ipc50_heading">TinyImagenet IPC50</a>
+      </div>
+    </div>
+
+    <section class="container" id="div_cifar10_ipc1_heading">
+      <div class="heading">
+        <p>
+        CIFAR10 IPC 1
+        </p>
+      </div>
+      <div id="div_cifar10_ipc1"></div>
+    </section>
+
+    <section class="container" id="div_cifar10_ipc10_heading">
+      <div class="heading">
+        <p>
+        CIFAR10 IPC 10
+        </p>
+      </div>
+      <div id="div_cifar10_ipc10"></div>
+    </section>
+
+    <section class="container" id="div_cifar10_ipc50_heading">
+      <div class="heading">
+        <p>
+        CIFAR10 IPC 50
+        </p>
+      </div>
+      <div id="div_cifar10_ipc50"></div>
+    </section>
+
+    <section class="container" id="div_cifar100_ipc1_heading">
+      <div class="heading">
+        <p>
+        CIFAR100 IPC 1
+        </p>
+      </div>
+      <div id="div_cifar100_ipc1"></div>
+    </section>
+
+    <section class="container" id="div_cifar100_ipc10_heading">
+      <div class="heading">
+        <p>
+        CIFAR100 IPC 10
+        </p>
+      </div>
+      <div id="div_cifar100_ipc10"></div>
+    </section>
+
+    <section class="container" id="div_cifar100_ipc50_heading">
+      <div class="heading">
+        <p>
+        CIFAR100 IPC 50
+        </p>
+      </div>
+      <div id="div_cifar100_ipc50"></div>
+    </section>
+
+    <section class="container" id="div_tinyimagenet_ipc1_heading">
+      <div class="heading">
+        <p>
+        TinyImagenet IPC 1
+        </p>
+      </div>
+      <div id="div_tinyimagenet_ipc1"></div>
+    </section>
+
+    <section class="container" id="div_tinyimagenet_ipc10_heading">
+      <div class="heading">
+        <p>
+        TinyImagenet IPC 10
+        </p>
+      </div>
+      <div id="div_tinyimagenet_ipc10"></div>
+    </section>
+
+    <section class="container" id="div_tinyimagenet_ipc50_heading">
+      <div class="heading">
+        <p>
+        TinyImagenet IPC 50
+        </p>
+      </div>
+      <div id="div_tinyimagenet_ipc50"></div>
+    </section>
+
+    <div class="vspace50"></div>
+
+    <section id="citation">
+      <div class="heading">
+        <p>Citation</p>
+      </div>
+      Consider citing our whitepaper if you want to reference our leaderboard or benchmark.
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #555555; font-weight: bold">@article</span>{cui2022dc,
+  title<span style="color: #333333">=</span>{DC<span style="color: #333333">-</span>BENCH: Dataset Condensation Benchmark},
+  author<span style="color: #333333">=</span>{Cui, Justin <span style="color: #000000; font-weight: bold">and</span> Wang, Ruochen <span style="color: #000000; font-weight: bold">and</span> Si, Si <span style="color: #000000; font-weight: bold">and</span> Hsieh, Cho<span style="color: #333333">-</span>Jui},
+  journal<span style="color: #333333">=</span>{arXiv preprint arXiv:<span style="color: #6600EE; font-weight: bold">2207.09639</span>},
+  year<span style="color: #333333">=</span>{<span style="color: #0000DD; font-weight: bold">2022</span>}
+}
+</pre></div>
+
+
+    </section>
+
+    <div class="vspace50"></div>
+
+  </div>
+
+  <hr class="bottomrule" />
+
+  <footer>
+    <small>&copy; 2022, DC-Bench
+  </footer>
+
+  <script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () {
+      myFunction();
+    };
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+  <script>
+    $("#div_cifar10_ipc1").load("./cifar10/cifar10-ipc1.html", function() {
+      $('#cifar10-ipc1').DataTable();
+    });
+    $("#div_cifar10_ipc10").load("./cifar10/cifar10-ipc10.html", function() {
+      $('#cifar10-ipc10').DataTable();
+    });
+    $("#div_cifar10_ipc50").load("./cifar10/cifar10-ipc50.html", function() {
+      $('#cifar10-ipc50').DataTable();
+    });
+    $("#div_cifar100_ipc1").load("./cifar100/cifar100-ipc1.html", function() {
+      $('#cifar10-ipc1').DataTable();
+    });
+    $("#div_cifar100_ipc10").load("./cifar100/cifar100-ipc10.html", function() {
+      $('#cifar10-ipc10').DataTable();
+    });
+    $("#div_cifar100_ipc50").load("./cifar100/cifar100-ipc50.html", function() {
+      $('#cifar10-ipc50').DataTable();
+    });
+    $("#div_tinyimagenet_ipc1").load("./tinyimagenet/tinyimagenet-ipc1.html", function() {
+      $('#tinyimagenet-ipc1').DataTable();
+    });
+    $("#div_tinyimagenet_ipc10").load("./tinyimagenet/tinyimagenet-ipc10.html", function() {
+      $('#tinyimagenet-ipc10').DataTable();
+    });
+    $("#div_tinyimagenet_ipc50").load("./tinyimagenet/tinyimagenet-ipc50.html", function() {
+      $('#tinyimagenet-ipc50').DataTable();
+    });
+  </script>
+</body>
